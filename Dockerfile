@@ -52,5 +52,5 @@ RUN apk add --update wget ca-certificates && \
     echo -ne "- with `java -version 2>&1 | awk 'NR == 2'`\n" >> /root/.built
 
 # Set environment
-ENV JAVA_HOME /opt/jdk
+ENV JAVA_HOME /usr/lib/jvm/default-jvm
 ENV PATH ${PATH}:${JAVA_HOME}/bin
