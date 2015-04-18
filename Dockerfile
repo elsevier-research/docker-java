@@ -1,5 +1,5 @@
 #
-# Oracle JRE 7 image
+# Oracle JDK 7 image
 #
 
 FROM 1science/alpine:3.1
@@ -9,9 +9,9 @@ MAINTAINER 1science Devops Team <devops@1science.org>
 ENV JAVA_VERSION 7
 ENV JAVA_UPDATE  80
 ENV JAVA_BUILD   15
-ENV JAVA_PACKAGE server-jre   
+ENV JAVA_PACKAGE jdk   
 
-# Install Glibc and Oracle server-jre 7
+# Install Glibc and Oracle JDK 7
 RUN apk add --update wget ca-certificates && \
     cd /tmp && \
     wget "https://circle-artifacts.com/gh/andyshinn/alpine-pkg-glibc/6/artifacts/0/home/ubuntu/alpine-pkg-glibc/packages/x86_64/glibc-2.21-r2.apk" && \
