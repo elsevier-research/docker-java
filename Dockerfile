@@ -49,3 +49,6 @@ RUN apk add --update wget ca-certificates && \
            /usr/lib/jvm/default-jvm/jre/lib/amd64/libgstreamer-lite.so \
            /usr/lib/jvm/default-jvm/jre/lib/amd64/libjavafx*.so \
            /usr/lib/jvm/default-jvm/jre/lib/amd64/libjfx*.so
+
+# Set build history
+RUN echo -ne "- with `java -version 2>&1 | awk 'NR == 2'`\n" >> /root/.built           
