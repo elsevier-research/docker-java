@@ -22,7 +22,7 @@ The following packages have been integrated:
 - tree
 - glibc (thanks to the work of [gliderlabs](https://github.com/gliderlabs/docker-alpine/issues/11) )
 
-# Version supported
+# Supported tags
 
 -	[`oracle-jre-8`, `latest`](https://github.com/1science/docker-java/tree/oracle-jre-8)
 -	[`oracle-jdk-8`](https://github.com/1science/docker-java/tree/oracle-jdk-8)
