@@ -9,7 +9,11 @@ MAINTAINER 1science Devops Team <devops@1science.org>
 ENV JAVA_VERSION 8
 ENV JAVA_UPDATE  45
 ENV JAVA_BUILD   14
-ENV JAVA_PACKAGE server-jre    
+ENV JAVA_PACKAGE server-jre
+
+# Set environment
+ENV JAVA_HOME /usr/lib/jvm/default-jvm
+ENV PATH ${PATH}:${JAVA_HOME}/bin
 
 # Install Glibc and Oracle server-jre 8
 WORKDIR /usr/lib/jvm
@@ -23,7 +27,7 @@ RUN apk add --update libgcc && \
         "http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}u${JAVA_UPDATE}-b${JAVA_BUILD}/${JAVA_PACKAGE}-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz" && \
     tar xzf "${JAVA_PACKAGE}-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz" && \
     mv "jdk1.${JAVA_VERSION}.0_${JAVA_UPDATE}" java-${JAVA_VERSION}-oracle && \
-    ln -s "java-${JAVA_VERSION}-oracle" default-jvm && \
+    ln -s "java-${JAVA_VERSION}-oracle" $JAVA_HOME && \
     apk del libgcc && \
     rm -f ${JAVA_PACKAGE}-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz && \
     rm -f *.apk && \
@@ -50,7 +54,3 @@ RUN apk add --update libgcc && \
     echo -ne "- with `java -version 2>&1 | awk 'NR == 2'`\n" >> /root/.built
 
 WORKDIR /root
-
-# Set environment
-ENV JAVA_HOME /usr/lib/jvm/default-jvm
-ENV PATH ${PATH}:${JAVA_HOME}/bin
