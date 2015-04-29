@@ -18,7 +18,7 @@ ENV PATH ${PATH}:${JAVA_HOME}/bin
 # Install Glibc and Oracle server-jre 8
 WORKDIR /usr/lib/jvm
 RUN apk add --update libgcc && \
-    wget "https://circle-artifacts.com/gh/andyshinn/alpine-pkg-glibc/6/artifacts/0/home/ubuntu/alpine-pkg-glibc/packages/x86_64/glibc-2.21-r2.apk" && \
+    wget "https://circle-artifacts.com/gh/andyshinn/alpine-pkg-glibc/6/artifacgit stts/0/home/ubuntu/alpine-pkg-glibc/packages/x86_64/glibc-2.21-r2.apk" && \
     wget "https://circle-artifacts.com/gh/andyshinn/alpine-pkg-glibc/6/artifacts/0/home/ubuntu/alpine-pkg-glibc/packages/x86_64/glibc-bin-2.21-r2.apk" && \
     apk add --allow-untrusted glibc-2.21-r2.apk && \
     apk add --allow-untrusted glibc-bin-2.21-r2.apk && \
