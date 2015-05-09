@@ -6,14 +6,10 @@ FROM 1science/alpine:3.1
 MAINTAINER 1science Devops Team <devops@1science.org>
 
 # Java Version
-ENV JAVA_VERSION 8
-ENV JAVA_UPDATE  45
-ENV JAVA_BUILD   14
-ENV JAVA_PACKAGE server-jre
+ENV JAVA_VERSION=8 JAVA_UPDATE=45 JAVA_BUILD=14 JAVA_PACKAGE=server-jre
 
 # Set environment
-ENV JAVA_HOME /usr/lib/jvm/default-jvm
-ENV PATH ${PATH}:${JAVA_HOME}/bin
+ENV JAVA_HOME=/usr/lib/jvm/default-jvm PATH=${PATH}:${JAVA_HOME}/bin
 
 # Copy apks
 COPY /lib /var/cache/apk
