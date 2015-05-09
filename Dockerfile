@@ -3,7 +3,6 @@
 #
 
 FROM 1science/alpine:3.1
-MAINTAINER 1science Devops Team <devops@1science.org>
 
 # Java Version
 ENV JAVA_VERSION=8 JAVA_UPDATE=45 JAVA_BUILD=14 JAVA_PACKAGE=server-jre
