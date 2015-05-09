@@ -6,14 +6,10 @@ FROM 1science/alpine:3.1
 MAINTAINER 1science Devops Team <devops@1science.org>
 
 # Java Version
-ENV JAVA_VERSION 7
-ENV JAVA_UPDATE  80
-ENV JAVA_BUILD   15
-ENV JAVA_PACKAGE server-jre   
+ENV JAVA_VERSION=7 JAVA_UPDATE=80 JAVA_BUILD=15 JAVA_PACKAGE=server-jre
 
 # Set environment
-ENV JAVA_HOME /usr/lib/jvm/default-jvm
-ENV PATH ${PATH}:${JAVA_HOME}/bin
+ENV JAVA_HOME=/usr/lib/jvm/default-jvm PATH=${PATH}:${JAVA_HOME}/bin
 
 # Install Glibc and Oracle server-jre 7
 RUN apk add --update libgcc && \
