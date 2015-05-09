@@ -5,10 +5,10 @@
 FROM 1science/alpine:3.1
 
 # Java Version
-ENV JAVA_VERSION=7 JAVA_UPDATE=80 JAVA_BUILD=15 JAVA_PACKAGE=server-jre
+ENV JAVA_VERSION=7 JAVA_UPDATE=80 JAVA_BUILD=15 JAVA_PACKAGE=server-jre JAVA_HOME=/usr/lib/jvm/default-jvm
 
 # Set environment
-ENV JAVA_HOME=/usr/lib/jvm/default-jvm PATH=${PATH}:${JAVA_HOME}/bin
+ENV PATH=${PATH}:${JAVA_HOME}/bin
 
 # Copy apks
 COPY /lib /var/cache/apk
