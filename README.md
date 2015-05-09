@@ -13,7 +13,7 @@ This image is based on [Alpine Linux](https://github.com/1science/docker-alpine)
 
 The image size is approximately 164 MB.
 
-# Included Display packages
+# Included packages
 
 The following packages have been integrated:
 
