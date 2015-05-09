@@ -11,7 +11,9 @@ Java is a registered trademark of Oracle and/or its affiliates.
 
 This image is based on [Alpine Linux](https://github.com/1science/docker-alpine) and all the tools related to Java FX have been removed in order to reduce the image size.
 
-# Included packages
+The image size is approximately 164 MB.
+
+# Included Display packages
 
 The following packages have been integrated:
 
