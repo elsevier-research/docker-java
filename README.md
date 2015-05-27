@@ -1,3 +1,5 @@
+[![](https://badge.imagelayers.io/1science/java:latest.svg)](https://imagelayers.io/?images=1science/java:latest 'Get your own badge on imagelayers.io')
+
 # What is Java?
 
 ![logo](https://raw.githubusercontent.com/1science/docker-java/latest/logo.png)
