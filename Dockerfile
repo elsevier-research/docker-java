@@ -47,6 +47,7 @@ RUN apk add --update libgcc && \
            default-jvm/jre/lib/amd64/libgstreamer-lite.so \
            default-jvm/jre/lib/amd64/libjavafx*.so \
            default-jvm/jre/lib/amd64/libjfx*.so && \
+    echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf && \
     echo -ne "- with `java -version 2>&1 | awk 'NR == 2'`\n" >> /root/.built
 
 WORKDIR /root
