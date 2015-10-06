@@ -2,10 +2,10 @@
 # Oracle JRE 8 image
 #
 
-FROM 1science/alpine:3.1
+FROM 1science/alpine:3.2
 
 # Java Version
-ENV JAVA_VERSION=8 JAVA_UPDATE=45 JAVA_BUILD=14 JAVA_PACKAGE=server-jre JAVA_HOME=/usr/lib/jvm/default-jvm
+ENV JAVA_VERSION=8 JAVA_UPDATE=60 JAVA_BUILD=27 JAVA_PACKAGE=server-jre JAVA_HOME=/usr/lib/jvm/default-jvm
 
 # Set environment
 ENV PATH=${PATH}:${JAVA_HOME}/bin
