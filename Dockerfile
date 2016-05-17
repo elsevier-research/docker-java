@@ -5,7 +5,7 @@
 FROM 1science/alpine:3.3
 
 # Java Version
-ENV JAVA_VERSION=8 JAVA_UPDATE=66 JAVA_BUILD=17 JAVA_PACKAGE=server-jre JAVA_HOME=/usr/lib/jvm/default-jvm
+ENV JAVA_VERSION=8 JAVA_UPDATE=91 JAVA_BUILD=14 JAVA_PACKAGE=server-jre JAVA_HOME=/usr/lib/jvm/default-jvm
 
 # Set environment
 ENV PATH=${PATH}:${JAVA_HOME}/bin
